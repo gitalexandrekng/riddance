@@ -1,0 +1,629 @@
+.focus{
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+
+    .theplant{
+        width: 100%;
+        position:absolute;
+        height:400px;
+        background-image:url(../img/plant.jpg);
+        top:-100px;
+        left:-100px;
+        background-size:contain;
+        background-repeat: no-repeat;
+    }
+
+    .content-h2{
+        justify-content: center;
+    }
+
+    .content-h3{
+        &:after{
+            left:0;
+            right:0;
+            margin:auto;
+        }
+    }
+
+    p{
+        max-width: 600px;
+        margin:auto auto 30px auto;
+    }
+
+    .carte{
+        background-size:contain;
+        width:100%;
+        height:600px;
+        background-image:url(../img/regions.svg);
+        background-size:center;
+        background-repeat: no-repeat;
+    }
+}
+
+.middle-section{
+    width: 100%;
+    position:relative;
+    display: flex;
+    color:white;
+    text-align: center;
+    justify-content: center;
+    padding:100px;
+
+    .cntent{
+        position: relative;
+        z-index:10;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        h2{
+            font-family: "Caveat";
+        }
+
+        ul{
+            margin-top:50px;
+            margin-bottom:50px;
+
+            li{
+                width:130px;
+                height:50px;
+                margin:0px 15px;
+                display: inline-block;
+                background-size:contain;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+        }
+    }
+
+    &:after{
+        content:'';
+        width:100%;
+        height:100%;
+        top:0;
+        left:0;
+        position: absolute;
+        background:rgba(0,0,0,0.4);
+    }
+}
+
+nav{
+    position:fixed;
+    z-index:999;
+    top:0;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width:100%;
+    color:white;
+    transition: 0.3s;
+    box-shadow:0px 0px 0px rgba(0,0,0,0);
+    padding:15px 0px;
+
+    .content-nav{
+        display: flex;
+        align-items: center;
+        height:100%;
+        width: 100%;
+
+        .logo{
+            padding-left:20px;
+            font-size:22px;
+            font-weight: 200;
+            font-family: "Caveat";
+        }
+
+        .other-content{
+            margin-left: auto;
+            padding-right:20px;
+
+            .themenu{
+                display: flex;
+                align-items: center;
+
+                li{
+                    display: inline-block;
+
+                    .round-profile{
+                        width:40px;
+                        height:40px;
+                        border-radius: 50%;
+                        background: white;
+                        background-size:cover;
+                        background-position: center;
+                    }
+
+                    a{
+                        color:white;
+                        font-size:14px;
+                        display: block;
+                        margin-right:20px;
+                        position: relative;
+                        padding-right:20px;
+                        transition: 0.3s;
+
+                        &:after{
+                            content:'';
+                            position:absolute;
+                            top:0;
+                            bottom:0;
+                            right:0;
+                            height:8px;
+                            width: 1px;
+                            background:white;
+                            margin:auto;
+                            transition: 0.3s;
+                        }
+
+                        &:hover{
+                            color:$primary-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.nav-view{
+    background:rgba(255,255,255,1);
+    color:black;
+    box-shadow:0px 0px 20px rgba(0,0,0,0.1);
+    padding:10px 0px;
+
+    .content-nav{
+
+        .logo{
+        }
+
+        .other-content{
+
+            .themenu{
+
+                li{
+
+                    .round-profile{
+                    }
+
+                    a{
+                        color: black;
+
+                        &:after{
+                            background: black;
+                        }
+
+                        &:hover{
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+h2, h3{
+    //font-family: "Caveat" !important;
+}
+
+.content-h2{
+    position:relative;
+    display: flex;
+    font-family: "Caveat";
+
+    .thespan{
+        position: relative;
+        z-index: 5;
+        padding:0px 10px;
+
+        &:after{
+            content:'';
+            position:absolute;
+            bottom:5px;
+            left:0px;
+            background:lighten($primary-color,30%);
+            height:20px;
+            width:100%;
+        }
+
+        span{
+            display: block;
+            position: relative;
+            z-index: 10;
+            color:$primary-color;
+        }
+    }
+}
+
+.content-h3{
+    //font-family: "Open Sans";
+    font-size:20px;
+    //font-weight: bold;
+    margin-bottom:15px;
+    padding-bottom:15px;
+    position: relative;
+    color:lighten(black,20%);
+
+    &:after{
+        content:'';
+        position: absolute;
+        bottom:0;
+        left:0;
+        height:2px;
+        width:75px;
+        background:$primary-color;
+    }
+}
+
+p{
+    color:lighten(black,50%)
+}
+
+.grey-section{
+    background:lighten(black,97.5%);
+}
+
+.green-section{
+    background:black;
+    display: none;
+}
+
+.partenaires{
+    padding:50px 0px;
+
+    .logo{
+        background-size:contain;
+        background-position:center;
+        background-repeat: no-repeat;
+        height:100px;
+        width:100%;
+    }
+}
+
+.numbers{
+    position:relative;
+
+    .content-bubble{
+        position:relative;
+
+        &:after{
+            content:'';
+            position:absolute;
+            top:0;
+            bottom:0;
+            right:0;
+            margin:auto;
+            height:2px;
+            width:calc(100% - 60px);
+            background:lighten(black,80%);
+        }
+
+        .chiffre{
+            width:50px;
+            height:50px;
+            border-radius: 50%;
+            border:2px solid lighten(black,80%);
+            color: lighten(black,70%);
+            font-family: "Caveat";
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    .title{
+        margin-top:20px;
+        color:$primary-color;
+        font-weight:bold;
+    }
+
+    .content{
+        margin-top:10px;
+        font-size:14px;
+        color:lighten(black,50%);
+    }
+}
+
+.header{
+    height:85vh;
+    //background-image:url(../img/background.jpg);
+    //background-size:cover;
+    //background-position:center;
+    position:relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:after{
+        content:'';
+        background:linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0));
+        position:absolute;
+        height:150%;
+        width:100%;
+        bottom:0;
+        left:0;
+    }
+
+    .content-header{
+        position:relative;
+        z-index:10;
+        color:white;
+        width:100%;
+        text-align: center;
+
+        h2{
+            font-family: "Caveat";
+        }
+
+        .describe{
+            margin-bottom: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            max-width:600px;
+        }
+    }
+}
+
+.scroll{
+    height:15vh;
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    background:linear-gradient(to top, white, lighten(black,97.5%));
+    position:relative;
+    margin-bottom:25px;
+
+    .fl{
+        margin-top:25px;
+        font-size:12px;
+        margin-bottom:5px;
+        opacity:0.5;
+    }
+
+    i{
+        display: block;
+        margin-bottom:15px;
+        opacity:0.5;
+    }
+}
+
+section{
+    padding:100px 0px;
+}
+
+.custombuttongreen{
+    padding:10px 20px;
+    display: inline-block;
+    background:darken($primary-color, 20%);
+    color:white;
+    border-radius: 3px;
+    transition: 0.3s;
+    font-size:14px;
+
+    &:hover{
+        background:darken($primary-color, 25%);
+        color:white;
+    }
+}
+
+.searchbar{
+    position:absolute;
+    width:100%;
+    top:-30px;
+    left:0;
+
+    form{
+        background:white;
+        box-shadow:0px 0px 40px rgba(0,0,0,0.1);
+        border-radius: 3px;
+        overflow: hidden;
+
+        .line{
+            padding:0px 15px;
+            position: relative;
+        }
+
+        .one{
+            padding-left: 45px;
+
+            i{
+                position: absolute;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                left:25px;
+                top:0;
+                bottom:0;
+                margin:auto;
+                color:lighten(black,70%);
+                z-index: 10;
+            }
+        }
+
+        .one, .two{
+            position:relative;
+
+            &:after{
+                content:'';
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                height:20px;
+                width:1px;
+                margin:auto;
+                background:#CCC;
+            }
+        }
+
+        input{
+            margin:0;
+        }
+
+        select{
+            margin:0;
+        }
+
+        input[type="text"], select{
+            height:35px;
+            border:0;
+            box-shadow:0px 0px 0px 0px;
+            outline:0;
+            font-size:14px;
+            margin:15px 0px;
+        }
+
+        input[type="text"]{
+            position:relative;
+
+            &:after{
+                content:'';
+                height:20px;
+                width:1px;
+                background:red;
+                position:absolute;
+                top:0;
+                right:0;
+                bottom:0;
+                margin:auto;
+            }
+        }
+
+        .custombuttongreen{
+            width:100%;
+            height:100%;
+        }
+    }
+}
+
+.parallax-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.parallax-container .parallax {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.parallax-container .parallax img {
+  display: none;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+footer{
+    color:white;
+
+    .top-footer{
+        padding:20px;
+        background:lighten(black,8%);
+
+        .content{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .logz{
+                font-family: "Caveat";
+                font-size:32px;
+            }
+
+            .social{
+                margin-left:auto;
+
+                ul{
+                    margin:0;
+
+                    li{
+                        display: inline-block;
+                        margin-left:25px;
+
+                        .white-text{
+                            font-size: 14px;
+                        }
+
+                        a{
+                            color:white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .bottom-footer{
+        padding:50px 0px;
+        background:lighten(black,10%);
+
+        .linked-b{
+            padding:0;
+            margin: 0;
+
+            li{
+                list-style-type: none;
+
+                a{
+                    font-size:14px;
+                }
+            }
+
+            .address{
+                font-size:14px;
+                color:lighten(black,70%)
+            }
+        }
+
+        .ui{
+            margin: 10px 0px 0px 0px;
+            display: flex;
+
+            li{
+                display: flex;
+                margin-right:30px;
+
+                a{
+                    font-size:14px;
+                    display: flex;
+                    align-items: center;
+
+                    i{
+                        display: block;
+                        width:30px;
+                        height:30px;
+                        border:2px solid lighten(black,20%);
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        color:lighten(black,70%);
+                        margin-right:10px;
+                    }
+                }
+            }
+        }
+    }
+
+    .config{
+        padding:15px;
+        border-top:1px solid lighten(black,15%);
+        background:lighten(black,10%);
+        text-align: center;
+        font-size:14px;
+        color:lighten(black,50%);
+    }
+}
